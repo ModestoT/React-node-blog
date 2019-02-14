@@ -13,7 +13,7 @@ class App extends Component {
 
   componentDidMount(){
     axios
-      .get('http://localhost:4000/api/users')
+      .get('https://mt-node-blog.herokuapp.com/api/users')
       .then(res => {
         this.setState({ users: res.data });
       })

@@ -11,7 +11,7 @@ class SingleUser extends React.Component {
         const user = this.props.users.find(user => `${user.id}` === this.props.match.params.id);
         
         axios
-            .get(`http://localhost:4000/api/users/posts/${user.id}`)
+            .get(`https://mt-node-blog.herokuapp.com/api/users/posts/${user.id}`)
             .then(res => {
                 this.setState({ user: user, posts: res.data });
             })
